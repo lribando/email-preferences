@@ -1,0 +1,84 @@
+.email-page {
+  .form-area {
+    padding-bottom: 50px;
+    @media @viewport-tiny {
+      padding-bottom: 20px;
+    }
+    .field-left {
+      margin: 10px 0;
+      width: 33%;
+      @media @viewport-tiny {
+        width: 100%;
+      }
+    }
+    .display-as-list {
+      width: 100%;
+    }
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+  .email-preferences {
+    .primary {
+      border-top: 1px solid @hairline-color;
+      padding: 50px 0 30px;
+      @media @viewport-tiny {
+        font-size: 16px;
+        padding: 30px 0 20px;
+      }
+    }
+  }
+
+  .sub-header {
+    padding-bottom: 30px;
+    @media @viewport-medium, @viewport-narrow, @viewport-tiny {
+      margin: 20px;
+      padding-bottom: 0;
+    }
+    @media @viewport-tiny {
+      font-size: 16px;
+    }
+  }
+
+  .email-category {
+    padding-bottom: 47px;
+  }
+
+  .checkbox {
+    display: inline;
+    float: left;
+    margin: 2px 10px 10px 3px;
+  }
+
+  .field-right {
+    float: right;
+    @media @viewport-narrow, @viewport-tiny {
+      float: none;
+      padding: 0 0 30px;
+    }
+  }
+
+  .unsubscribe-all {
+    padding-right: 35px;
+  }
+
+  @media @viewport-narrow, @viewport-tiny {
+    .email-preferences-form {
+      margin: 0 2%;
+      @media @viewport-tiny {
+        margin: 0 25%;
+      }
+    }
+  }
+  @media @viewport-tiny {
+    .main {
+      font-size: 12px;
+    }
+
+    .unsubscribe-all {
+      display: block;
+      margin-bottom: 15px;
+    }
+  }
+}

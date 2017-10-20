@@ -1,0 +1,25 @@
+<div id="main" class="main email-page greedy-height">
+  {{{accountNavigation}}}
+  <div class="right-container">
+    <header class="page-header">
+      <h1 class="h1">{{_lookupMessage "web_account" "email_preferences"}}</h1>
+      <p class="contact">{{{_lookupMessage "swift" "questions_contact"}}}</p>
+    </header>
+    {{> email/_email}}
+  </div>
+</div>
+{{#contentFor "scripts"}}
+  <script type="text/javascript" src="/{{appPath}}/{{appVersion}}/templates.js"></script>
+  <script type="text/javascript">
+    gilt.require(['common.page_controller', 'app.email'], function(pageController, email) {
+      pageController.init({
+        {{! We want users to be able to unsub with one click }}
+        'isLoggedIn': true,
+        'publicApiAccountPath': '{{publicApiAccountPath}}',
+        'apiWebAccount': '{{apiWebAccount}}',
+        'userGuid': '{{userGuid}}'
+      });
+      email.init();
+    });
+  </script>
+{{/contentFor}}
